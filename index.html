@@ -1,0 +1,161 @@
+<!-- <!doctype html> -->
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>index</title>
+  <link rel="stylesheet" href="src/styles/style.css" />
+  <script type="text/javascript" src="../src/vendor/jquery.min.js"></script>
+  <script src="src/vendor/Echarts.js"></script>
+  <style>
+    .responsive-background {
+      position: relative;
+      width: 100%;
+      max-width: 100vw; /* 确保宽度不超过视口宽度 */
+      height: 100vh; /* 确保高度等于视口高度 */
+      background: url('src/assets/img/wordcloud.svg') no-repeat center center fixed;
+      background-size: cover; /* 背景图像覆盖整个容器 */
+    }
+    .title, .text {
+      position: relative;
+      z-index: 1; /* 确保文本内容显示在SVG图像上方 */
+      /* 如果需要，可以添加额外的样式来增强文本的可读性 */
+      color: #fff; /* 举例：设置文本颜色为白色，以确保与背景形成对比 */
+    }
+  </style>
+</head>
+<body>
+
+<!-- 导航栏
+<nav class="navbar">
+  <ul>
+    <li><a href="#section1">前言</a></li>
+    <li><a href="#section2">全年讨论热度</a></li>
+    <li><a href="#section3">各省各月热度</a></li>
+    <li><a href="#section4">“冰与火之歌”</a></li>
+    <li><a href="#section5">文旅抖音<br>各显其能</a></li>
+    <li><a href="#section7">数量与质量</a></li>
+    <li><a href="#section6">流量之下<br>叫号未必叫座</a></li>
+    <li><a href="#section8">各省的人<br>都在去哪？</a></li>
+    <li><a href="#section9">谁是谁的平替？</a></li>
+    <li><a href="#section10">结语</a></li>
+  </ul>
+</nav>
+
+-->
+
+<div class="container">
+  <!-- 第一部分：标题页/前言 -->
+  <section id="section1" class="responsive-background">
+    <h1 class="title">流量时代，中国文旅的2023</h1><br>
+    <div class="text">
+      2023年对中国文旅业来说，是充满变革与机遇的一年。<br>
+      随着数字化转型的深入，流量成为了衡量文旅项目成功与否的关键指标之一。<br><br>
+      在这一年中，我们见证了流量如何重塑旅游市场，<br>如何影响文化产品的传播，以及它在推动地方经济发展中所扮演的角色。<br><br>
+      在流量的浪潮中，大家在关注什么？<br>哪些地区因流量受益？对这些地区来说，流量真的能带来充足的红利吗？<br>通过数据可视化，我们尝试揭示流量背后的趋势，<br>分析其对文旅产业的实际影响，以及探讨如何更有效地利用流量来推动文旅业的可持续发展。<br><br>
+      中山大学新闻传播学院 2020级新闻班 侯天泽
+    </div>
+  </section>
+
+  <!-- 第二部分：全年讨论热度 -->
+  <section class="page-type-1" id="section2">
+    <br><br>
+    <div class="title">无假期，不旅游</div>
+    <div class="text-box">下图展示了2023年至2024年第一季度“旅游”话题下每日热门微博条数。<br>不难看出该话题在法定节假日相对火热，而在工作日期间讨论低迷。<br>2024年春节假期期间，话题热度达到峰值。<br>由于大多数人只能在假期出门旅游，文旅热搜的存在并不能改变人们关注旅游话题的规律。</div>
+    <div class="chart" id="date_line">
+      <script type="text/javascript" src="src/scripts/date_line.js">
+      </script>
+    </div>
+  </section>
+
+
+  <!-- 第三部分：各省各月热度 -->
+  <section class="page-type-1" id="section3">
+    <br><br>
+    <div class="title">流量“黑马”频出的一年</div>
+    <div class="text-box">下图展示了2023年至2024年第一季度“旅游”话题下每日提到各省的热门微博条数。<br>使用鼠标在左图中选择日期，以激活右图显示；<br>鼠标划过图例以查看相应省区曲线。<br><br>2023年4月，“淄博烧烤”带火山东；<br>2024年1月，“尔滨”带火黑龙江。</div>
+    <div class="chart" id="province_date">
+      <script type="text/javascript" src="src/scripts/province_date.js">
+      </script>
+    </div>
+  </section>
+
+  <!-- 第四部分：冰与火之歌 -->
+  <section class="page-type-1" id="section4">
+    <br><br>
+    <div class="title">“冰与火之歌”：淄博与尔滨的“泼天富贵”</div>
+    <div class="text-box">下图展示了2023年至2024年第一季度在“旅游”话题下提到“淄博”和“尔滨”的微博条数<br>两座城市分别在不同时间爆红，其中有互联网时代流量机制的偶然，亦有地方旅游建设加紧发力的必然。<br>然而，我们也必须看到，尽管淄博和尔滨努力维持热度，网民的关注度依然会很快转向其他热搜，一切重新归于平静。<br>这种“流量红利”很难带来长期稳定的收益，各地更需久久为功提升旅游体验。</div>
+    <div class="chart" id="zibo_erbin">
+      <script type="text/javascript" src="src/scripts/zibo_erbin.js">
+      </script>
+    </div>
+  </section>
+
+  <!-- 第五部分：文旅抖音，各显其能 -->
+  <section class="page-type-1" id="section5">
+    <br><br>
+    <div class="title">文旅抖音，各显其能</div>
+    <div class="text-box">文旅抖音账号是2023年中国文旅领域最最出圈的平台之一。<br>下图展示了截至2024年1月，各省抖音账号作品及粉丝数据。<br>然而，抖音的爆火出圈一定能为地区旅游业带来真实收益吗？</div>
+    <div class="chart" id="tok">
+      <script type="text/javascript" src="src/scripts/tok.js">
+      </script>
+    </div>
+  </section>
+
+  <!-- 第六部分：数量质量 -->
+  <section class="page-type-1" id="section6">
+    <br><br>
+    <div class="title">文旅抖音的“数量”和“质量”</div>
+    <div class="text-box">数量并非评估文旅抖音账号运营水平的唯一KPI，每条短视频的平均获赞数更能反映网民对账号内容的反响。<br>当然，互联网时代，算法和流量机制不可捉摸，提升数量或许确实也是一种可行的运营策略。<br>但如果片面追求数量，丢掉质量，则得不偿失。<br>文旅短视频的“数量”和“质量”是各地需要发挥智慧思考的大问题。</div>
+    <div class="chart" id="likes_per_vid">
+      <script type="text/javascript" src="src/scripts/likes_per_vid.js">
+      </script>
+    </div>
+  </section>
+
+  <!-- 第七部分：流量之下 -->
+  <section class="page-type-1" id="section7">
+    <br><br>
+    <div class="title">流量之下，其实难副</div>
+    <div class="text-box">在各省文旅抖音“整活”爆火出圈的同时，我们也应当看到，<br>在现实旅游收入表现看来，叫号未必叫座。<br>许多省区虽然抖音账号爆红，然而旅游资源服务能力有限，游客人均消费颇低。<br>大多数接待人次高、人均收入多的地区，依然是传统旅游强省，而不是通过抖音爆红的“热门目的地”。<br>流量之下，其实难副。</div>
+    <div class="chart" id="dot">
+      <script type="text/javascript" src="src/scripts/dot.js">
+      </script>
+    </div>
+  </section>
+
+  <!-- 第八部分：各省人都在去哪 -->
+  <section class="page-type-1" id="section8">
+    <br><br>
+    <div class="title">各省的人最喜欢去哪里？</div>
+    <div class="text-box">基于“旅游”话题下发布IP位于各省、提到其他省份旅游目的地的微博统计。</div>
+    <div class="chart" id="chord">
+      <img src="src/assets/img/p2p.svg" height="800">
+    </div>
+  </section>
+
+  <!-- 第九部分：平替 -->
+  <section class="page-type-1" id="section9">
+    <br><br>
+    <div class="title">谁是谁的平替？</div>
+    <div class="text-box">"不是XX去不起，而是XX更有性价比"这一句式在2023年下半年引发了模因传播，许多人用这一句式和大家分享自己的穷游心得。<br>基于2023年至2024年第一季度类似“不是XX去不起，而是XX更有性价比”的句式进行正则匹配。<br>节点可自由拖拽。<br><br>哈尔滨成为最大“平替中转站”，最长的“平替链”连接了六个旅游目的地，例如：<br>瑞士 → 哈尔滨 → 威海 → 泉州 → 河南 → 浙江</div>
+    <div class="chart" id="cheap_sub">
+      <script type="text/javascript" src="src/scripts/cheap_sub.js"></script>
+    </div>
+  </section>
+
+
+  <!-- 第十部分：标题页/前言 -->
+  <section id="section10" class="responsive-background">
+    <h1 class="title">结语</h1><br>
+    <div class="text">
+      随着2023年的落幕，中国文旅业在数字化转型的浪潮中迎来了新的发展机遇。<br><br>
+      流量作为衡量文旅项目成功的关键指标，<br>不仅重塑了旅游市场，也深刻影响了文化产品的传播和地方经济的发展。<br>
+      然而，流量背后的趋势和对文旅产业的实际影响，<br>以及如何更有效地利用流量推动文旅业的可持续发展，仍是值得我们深入探讨的问题。<br><br>
+      <br>【数据源】<br>2023年至2024年第一季度热门微博<br>各地文旅统计数据报告<br>抖音历史粉丝和作品数据<br><br>
+      中山大学新闻传播学院 2020级新闻班 侯天泽
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

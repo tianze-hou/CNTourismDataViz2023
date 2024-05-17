@@ -1,0 +1,330 @@
+:root {
+    --main-bg-color: #141436;
+    --text-color: #f4f4f4;
+    --hover-color: #22bbff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-bg-color);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    /* 隐藏滚动条，用导航条取代它 */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+
+/* 隐藏滚动条：WebKit */
+.container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.navbar li {
+    list-style: none;
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+.navbar li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+.navbar li a:hover {
+    color: var(--hover-color);
+}
+
+/* 内容 */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    color: var(--text-color);
+    scroll-snap-align: center;
+}
+
+/* 页面类型1的样式 */
+.page-type-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.page-type-1 .title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.page-type-1 .text-box {
+    flex-grow: 1;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.page-type-1 .chart {
+    flex-grow: 3;
+    width: 100%;
+    height: auto;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .page-type-1 .title {
+        font-size: 2em;
+    }
+
+    .page-type-1 .text-box {
+        max-width: 95%;
+    }
+}
+
+/* 页面类型2的样式 */
+.page-type-2 {
+    display: flex;
+    height: 100vh;
+}
+
+.page-type-2 .left-column {
+    flex: 1; /* 左侧列占据1份 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.page-type-2 .left-column .title {
+    font-size: 2.5em;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.page-type-2 .left-column .text-box {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.page-type-2 .right-column {
+    flex: 2; /* 右侧列占据2份 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.page-type-2 .right-column .chart {
+    width: 100%;
+    height: auto;
+}
+
+/* 响应式设计 */
+@media (min-width: 768px) {
+    .page-type-2 {
+        flex-direction: column;
+    }
+
+    .page-type-2 .left-column,
+    .page-type-2 .right-column {
+        width: 100%;
+    }
+
+    .page-type-2 .left-column .title {
+        font-size: 2em;
+    }
+}
+
+/* 整页图表 */
+.full-page-chart {
+    width: 80vw;
+    height: 80vh;
+    margin: 0; /* 移除外边距 */
+    padding: 0; /* 移除内边距，确保图表充满整个section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 自适应宽度的图表或元素 */
+.responsive-chart {
+    width: 80%;
+    padding-top: 45%; /* 约16:9 */
+    position: relative;
+}
+
+/* 图表容器的绝对定位 */
+.responsive-chart > .chart-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    :root {
+        --main-bg-color: #141436;
+        --text-color: #f4f4f4;
+        --hover-color: #22bbff;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        background-color: var(--main-bg-color);
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        /* 隐藏滚动条，用导航条取代它 */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE 10+ */
+    }
+
+    /* 隐藏滚动条：WebKit */
+
+    .container::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+
+    .navbar {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        display: flex;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .navbar li {
+        list-style: none;
+        margin: 0 1rem;
+        padding: 1rem;
+    }
+
+    .navbar li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--text-color);
+    }
+
+    .navbar li a:hover {
+        color: var(--hover-color);
+    }
+
+    /* 内容 */
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+        color: var(--text-color);
+        scroll-snap-align: center;
+    }
+
+    /* 整页图表 */
+
+    .full-page-chart {
+        width: 100vw;
+        height: 100vh;
+        margin: 0; /* 移除外边距 */
+        padding: 0; /* 移除内边距，确保图表充满整个section */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* 自适应宽度的图表或元素 */
+
+    .responsive-chart {
+        width: 80%;
+        padding-top: 45%; /* 约16:9 */
+        position: relative;
+    }
+
+    .responsive-chart > .chart-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* 高度和宽度会自动填充到父容器的尺寸 */
+    }
+
+
+    /* 如果是竖屏，则隐藏navbar，调整表格排版 */
+    @media (max-width: 768px) {
+        .navbar {
+            display: none;
+        }
+
+        .responsive-chart {
+            width: 95%; /* 在小屏幕上留出更少的边距 */
+            padding-top: 50%; /* 增加padding-top比例以保持响应式设计 */
+        }
+    }
+    /* 高度和宽度会自动填充到父容器的尺寸 */
+}
+
+
+/* 如果是竖屏，则隐藏navbar，调整表格排版 */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .responsive-chart {
+        width: 95%; /* 在小屏幕上留出更少的边距 */
+        padding-top: 50%; /* 增加padding-top比例以保持响应式设计 */
+    }
+}
