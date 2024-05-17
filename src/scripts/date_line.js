@@ -26,7 +26,7 @@ var option = {
 };
 
 // 使用fetch API加载外部JSON文件
-fetch('../src/scripts/date_heatmap.json')
+fetch('/src/scripts/date_heatmap.json')
     .then(response => response.json())
     .then(data => {
         // 处理数据
