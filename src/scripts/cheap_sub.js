@@ -5,8 +5,6 @@
     });
     var option;
 
-    myChart.showLoading();
-
     // 硬编码JSON数据
     var graph = {
   "nodes": [
@@ -4657,7 +4655,6 @@
         ]
     };
 
-    myChart.hideLoading();
     myChart.setOption(option);
 
     window.onresize = function() {
